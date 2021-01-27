@@ -1,0 +1,10 @@
+tmp
+*.rdb
+.env
+Gemfile.lock
+.DS_Store
+.git
+.sass-cache
+.jekyll-cache
+_site/
+.jekyll-metadata

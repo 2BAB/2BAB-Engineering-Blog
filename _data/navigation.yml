@@ -1,0 +1,11 @@
+links:
+- title: 文章
+  url: /
+- title: 播客
+  url: https://binary.2bab.me/
+- title: 关于
+  url: /about
+- title: 搜索
+  url: /search
+- title: Rss
+  url: /atom.xml
