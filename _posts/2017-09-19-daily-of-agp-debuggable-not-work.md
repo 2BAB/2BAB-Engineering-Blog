@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "AGP 的日常 #7 - debuggable 属性无效"
-tags: [AGP 日常, AGP Daily, Android Gradle Plugin, 安卓打包插件, 安卓, Android, 中文]
+title: "构建日常 #7 debuggable 属性无效"
+tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
 ### 问题回顾

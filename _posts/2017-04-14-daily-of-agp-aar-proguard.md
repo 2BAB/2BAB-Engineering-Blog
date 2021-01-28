@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "AGP 的日常 #3 - 再谈 AAR 与混淆"
-tags: [AGP 日常, AGP Daily, Android Gradle Plugin, 安卓打包插件, 安卓, Android, 中文]
+title: "构建日常 #3 再谈 AAR 与混淆"
+tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
 之前写了篇[文章](http://2bab.me/2017/03/24/gradle-daily-crash-library-module-buildtypes/)讲到了由于 `buildTypes` 默认设置的原因导致  library module 无法 debug 的情况。事实上，当时只解决了打 Debug 包的情况，而忽略了打 Release 包时还埋了一个隐藏的问题。

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ListView 两种固定标头的技巧"
-tags: [Android,Listview,Pinned Header,固定, zh-CN]
+tags: [Android, UI]
 ---
 ## 第一种情况：
 

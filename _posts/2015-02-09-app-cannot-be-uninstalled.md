@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "无法卸载的 App - 设备管理器漏洞"
-tags: [Android,设备管理器,DeviceAdminReceiver, zh-CN]
+tags: [Android]
 ---
 前两天某朋友发现手机有个app无法卸载，后知其因设备管理器激活导致，遂去尝试取消，但却在取消那刻卡机。反复折腾之后，只能重刷。后来他发了一篇关于设备管理器bug的文章给我，便有了如下一番折腾。
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "AGP 的日常 #5 - 含 buildscript 的脚本执行顺序"
-tags: [AGP 日常, AGP Daily, Android Gradle Plugin, 安卓打包插件, 安卓, Android, 中文]
+title: "构建日常 #5 含 buildscript 的脚本执行顺序"
+tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
 最近在改一个裹脚布项目，对打包脚本升级的要求是「循序渐进」（工期紧，稳定为主）——Debug 下用新版的 Gradle Plugin，Release 用旧版的。嗯，很自然会想到改动 root project 下的 `build.gradle`，加一段判断：

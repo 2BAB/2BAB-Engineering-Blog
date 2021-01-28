@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hello World"
-tags: [Hello World, zh-CN]
+tags: [Hello World]
 ---
 
 从 Octopress 转到 Hexo，新的开始，新的不同。

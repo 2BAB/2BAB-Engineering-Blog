@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Android 源码笔记 #2 - 源码及 Framework 结构"
-tags: [Android,Framework,源码, zh-CN]
+title: "Android 源码笔记 #2 源码及 Framework 结构"
+tags: [Android, Framework, 源码]
 ---
 
 ## 源码结构

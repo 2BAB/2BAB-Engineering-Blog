@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "AGP 的日常 #6 - JDK 内的某个包失踪了"
-tags: [AGP 日常, AGP Daily, Android Gradle Plugin, 安卓打包插件, 安卓, Android, 中文]
+title: "构建日常 #6 JDK 内的某个包失踪了"
+tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
 最近在改一个之前的 Annotation Processor，想要实现一个这样的需求：对一个 Class 所 implement 的 interface 做判断——这些 interface 是否 extends 自一个统一的父 Interface。于是 Debug + Evaluate Expression 挖一下 `TypeElement` 的实例里都有些啥，看看有没好使的 API。

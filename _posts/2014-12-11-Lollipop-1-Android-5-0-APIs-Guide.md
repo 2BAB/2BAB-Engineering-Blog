@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Lollipop #1 - Android 5.0 APIs Guide"
-tags: [Android,Lollipop, zh-CN]
+title: "Lollipop #1 Android 5.0 APIs Guide"
+tags: [Android, Lollipop]
 ---
 > [原文链接](https://developer.android.com/about/versions/android-5.0.html) , 翻译 by 2BAB。
 

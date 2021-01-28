@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "插件化笔记 #5 - 资源分区修改插件"
-tags: [Android, Plugaget, 插件化, zh-CN]
+title: "插件化笔记 #5 资源分区修改插件"
+tags: [Android, 插件化]
 ---
 
 > Demo: https://github.com/2BAB/Android-Plugin-Dev-Notes

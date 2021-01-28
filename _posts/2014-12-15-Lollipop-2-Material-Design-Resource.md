@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Lollipop #2 - Material Design"
-tags: [Android,Lollipop,Material Design, zh-CN]
+title: "Lollipop #2 Material Design"
+tags: [Android, Lollipop, UI]
 ---
 
 开发的各个流程会用到的 Material Design 资源整合。

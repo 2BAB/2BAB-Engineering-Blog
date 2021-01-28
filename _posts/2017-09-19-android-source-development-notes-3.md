@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Android 源码笔记 #3 - Aapt 编译"
-tags: [Android, Framework, 源码, zh-CN]
+tags: [Android, Framework, 源码]
 ---
 
 碰到个问题，需要 debug aapt 里的一些东西，本来以为按照 [Android源码笔记-1-编译&烧录的一些坑](http://2bab.me/2017/03/10/android-source-development-notes-1) 的办法去设置环境再把 `make` 命令目标改一下即可，但是发现还是有些小问题，写下记录一哈。

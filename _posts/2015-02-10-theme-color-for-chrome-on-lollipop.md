@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Android 5.0 以上 Chrome AppBar 颜色定制"
-tags: [Android,Chrome,theme-color, zh-CN]
+tags: [Android, Chrome]
 ---
 放假在家用回了 Nexus 4，在 Lollipop 作为日常系统使用一段时间后，发现了一个有意思的东西。如下图，正常情况下使用 Chrome 浏览网站时，多任务的预览界面上，Chrome 的 App bar 是灰色一片。而其背后的知乎、Gmail因为设定了 colorPrimary 而极具辨识度。
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "AGP 的日常 #4 - aar 的 tools:replace 冲突"
-tags: [AGP 日常, AGP Daily, Android Gradle Plugin, 安卓打包插件, 安卓, Android, 中文]
+title: "构建日常 #4 aar 和 tools:replace 冲突"
+tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
 最近做一些 SDK 升级时，有些包引入后会有诸如此类的报错：

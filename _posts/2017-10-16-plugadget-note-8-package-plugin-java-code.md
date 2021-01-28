@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "插件化笔记 #8 - 插件的代码编译"
-tags: [Android, Plugaget, 插件化, zh-CN]
+tags: [Android, 插件化]
 ---
 
 > Demo: https://github.com/2BAB/Android-Plugin-Dev-Notes

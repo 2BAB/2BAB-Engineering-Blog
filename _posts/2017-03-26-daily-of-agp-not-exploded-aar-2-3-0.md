@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "AGP 的日常 #2 - AGP 2.3.0 再无 exploded-aar"
-tags: [AGP 日常, AGP Daily, Android Gradle Plugin, 安卓打包插件, 安卓, Android, 中文]
+title: "构建日常 #2 AGP 2.3.0 再无 exploded-aar"
+tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
 升级 Android Gradle  Plugin 至 2.3.0 后，会发现 exploded-aar 这个 build 目录下的文件夹大部分情况下不存在了（但是仍然有时候会出现一两个 aar 的解压包，有些诡异）。这个改动最相关的原因是 2.3.0 默认开启了 Build Cache，具体在[这里](http://tools.android.com/tech-docs/build-cache)有说明。

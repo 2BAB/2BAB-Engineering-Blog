@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "AGP 的日常 #1 - Library Module BuildTypes"
-tags: [AGP 日常, AGP Daily, Android Gradle Plugin, 安卓打包插件, 安卓, Android, 中文]
+title: "构建日常 #1 Library Module BuildTypes"
+tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
 最近工作中换了一个工程，重新配了一遍 Gradle 的环境，然后发现所有的 Library Module 都无法 Debug 或者只能取到某些全局变量（局部变量找不到）。百思不得其解时，突然发现我明明打的是 Debug 包 `assembleDebug`，我的 Library Module 执行的却都是 `transformClassesAndResourcesWithProguardForRelease

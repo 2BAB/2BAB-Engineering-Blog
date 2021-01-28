@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Android 里不能改变的东西 [译]"
-tags: [Android, zh-CN]
+tags: [Android]
 ---
 
 [原文链接](http://android-developers.blogspot.com/2011/06/things-that-cannot-change.html) , 翻译 by 2BAB。

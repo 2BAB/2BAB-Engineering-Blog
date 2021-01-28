@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Android 源码笔记 #1 - 编译&烧录"
-tags: [Android,Framework,源码, zh-CN]
+title: "Android 源码笔记 #1 编译&烧录"
+tags: [Android, Framework, 源码]
 ---
 
 由于最近工作需要 + 自己也挺感兴趣，折腾起 Android 的下层开发。
