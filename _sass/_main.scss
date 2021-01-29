@@ -206,8 +206,12 @@ main {
 		font-size: 1rem;
 	}
   
-  header,section {
+  header {
     padding: 0rem;
+  }
+  
+  section {
+    padding: 1rem 0 0 0;
   }
   
   .post ul {
