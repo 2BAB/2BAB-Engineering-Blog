@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "构建日常 #4 aar 和 tools:replace 冲突"
+title: "构建指北 #4 aar 和 tools:replace 冲突"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 

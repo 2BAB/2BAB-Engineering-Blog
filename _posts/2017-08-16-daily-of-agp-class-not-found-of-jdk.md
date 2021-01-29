@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "构建日常 #6 JDK 内的某个包失踪了"
+title: "构建指北 #6 JDK 内的某个包失踪了"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 

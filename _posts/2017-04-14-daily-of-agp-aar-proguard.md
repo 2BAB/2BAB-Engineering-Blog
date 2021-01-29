@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "构建日常 #3 再谈 AAR 与混淆"
+title: "构建指北 #3 再谈 AAR 与混淆"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "构建日常 #5 含 buildscript 的脚本执行顺序"
+title: "构建指北 #5 含 buildscript 的脚本执行顺序"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 

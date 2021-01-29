@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "构建日常 #7 debuggable 属性无效"
+title: "构建指北 #7 debuggable 属性无效"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 

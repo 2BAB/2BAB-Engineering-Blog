@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "构建日常 #1 Library Module BuildTypes"
+title: "构建指北 #1 Library Module BuildTypes"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 

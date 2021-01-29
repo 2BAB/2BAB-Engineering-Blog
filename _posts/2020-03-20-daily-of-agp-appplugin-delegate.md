@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "构建日常 #8 AppPlugin 加了代理？"
+title: "构建指北 #8 AppPlugin 加了代理？"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 

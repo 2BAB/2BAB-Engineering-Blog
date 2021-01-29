@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "构建日常 #2 AGP 2.3.0 再无 exploded-aar"
+title: "构建指北 #2 AGP 2.3.0 再无 exploded-aar"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
