@@ -10,3 +10,4 @@ tags: [Hello World]
 
 ![](http://2bab-images.lastmayday.com/blog/2014-12-10-hello-world-avatar.jpeg)
 
+*欢迎关注我的[公众号和微博](/about)。*

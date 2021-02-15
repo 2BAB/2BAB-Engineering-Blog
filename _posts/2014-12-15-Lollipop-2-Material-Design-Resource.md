@@ -195,3 +195,4 @@ tags: [Android, Lollipop, UI]
 ![](http://2bab-images.lastmayday.com/blog/2014-12-15-lollipop-material-design-27.jpeg?imageslim)
 
 
+*欢迎关注我的[公众号和微博](/about)。*

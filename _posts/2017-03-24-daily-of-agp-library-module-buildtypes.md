@@ -4,6 +4,8 @@ title: "构建指北 #1 Library Module BuildTypes"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
+*『构建指北』是探索 Android 构建相关的一系列文章，涵盖了 Gradle、Android Gradle Plugin、Kotlin Script 等工具，以及相关架构上的应用。以发现问题解决问题为出发点，传递新知提高生产效率为落脚点。*
+
 最近工作中换了一个工程，重新配了一遍 Gradle 的环境，然后发现所有的 Library Module 都无法 Debug 或者只能取到某些全局变量（局部变量找不到）。百思不得其解时，突然发现我明明打的是 Debug 包 `assembleDebug`，我的 Library Module 执行的却都是 `transformClassesAndResourcesWithProguardForRelease
 `。明明在这些 module 都配置了 `debug` 的 `buildTypes`，但却不生效，反而打了混淆的 release 包。
 
@@ -78,4 +80,4 @@ def isDebug() {
 
 **我们就只提供一种 buildType，也就是默认的 release，然后把type 内的配置动态化即可。这种方案适合只有两三种 type 的情况，可以用少量的代码在 Library 内部就解决问题。**
 
-
+*欢迎关注我的[公众号和微博](/about)。*

@@ -137,3 +137,4 @@ public CharSequence onDisableRequested(Context context, Intent intent) {
 - [测试APK](http://engineering-blog-2bab.qiniudn.com/DeviceAdmin-DeviceAdminTrick.apk)，安装后激活则无法卸载。
 - [恢复APK](http://engineering-blog-2bab.qiniudn.com/DeviceAdmin-recovery.apk)，覆盖安装后可顺利取消激活。
 
+*欢迎关注我的[公众号和微博](/about)。*

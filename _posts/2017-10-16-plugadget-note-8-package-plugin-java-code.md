@@ -127,3 +127,4 @@ project.android.registerTransform(new StripClassAndResTransform(project))
 - [https://github.com/didi/VirtualAPK/blob/HEAD/virtualapk-gradle-plugin/src/main/groovy/com.didi.virtualapk/transform/StripClassAndResTransform.groovy](https://github.com/didi/VirtualAPK/blob/HEAD/virtualapk-gradle-plugin/src/main/groovy/com.didi.virtualapk/transform/StripClassAndResTransform.groovy)
 - [http://google.github.io/android-gradle-dsl/javadoc/current/](http://google.github.io/android-gradle-dsl/javadoc/current/)
 
+*欢迎关注我的[公众号和微博](/about)。*

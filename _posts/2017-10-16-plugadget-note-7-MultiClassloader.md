@@ -131,3 +131,4 @@ public class BundleClassloader extends DexClassLoader {
 - [https://mp.weixin.qq.com/s/p8-ABKDpMLm6T4lJdK8Y3Q](https://mp.weixin.qq.com/s/p8-ABKDpMLm6T4lJdK8Y3Q)
 
 
+*欢迎关注我的[公众号和微博](/about)。*

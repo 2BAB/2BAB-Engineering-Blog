@@ -4,6 +4,8 @@ title: "构建指北 #5 含 buildscript 的脚本执行顺序"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
+*『构建指北』是探索 Android 构建相关的一系列文章，涵盖了 Gradle、Android Gradle Plugin、Kotlin Script 等工具，以及相关架构上的应用。以发现问题解决问题为出发点，传递新知提高生产效率为落脚点。*
+
 最近在改一个裹脚布项目，对打包脚本升级的要求是「循序渐进」（工期紧，稳定为主）——Debug 下用新版的 Gradle Plugin，Release 用旧版的。嗯，很自然会想到改动 root project 下的 `build.gradle`，加一段判断：
 
 ``` gradle
@@ -161,3 +163,4 @@ buildscript {
 
 
 
+*欢迎关注我的[公众号和微博](/about)。*

@@ -4,6 +4,8 @@ title: "构建指北 #7 debuggable 属性无效"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
+*『构建指北』是探索 Android 构建相关的一系列文章，涵盖了 Gradle、Android Gradle Plugin、Kotlin Script 等工具，以及相关架构上的应用。以发现问题解决问题为出发点，传递新知提高生产效率为落脚点。*
+
 ### 问题回顾
 
 不久前，在接手手头上这个老工程时，发现 `build.gradle` 中设置 `debuggable` 属性是无效的，只能手动在 `AndroidManifest.xml` 的 `application` 节点写死该属性（之前团队里就这样默默干了两年，发版前去掉这个属性，发版后再加上...），最近得空花了两三个周末研究了下缘由。
@@ -215,3 +217,4 @@ sp<XMLNode> XMLNode::getChildElement(const String16& tagNamespace, const String1
 
 
 
+*欢迎关注我的[公众号和微博](/about)。*

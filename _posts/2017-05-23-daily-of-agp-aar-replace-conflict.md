@@ -4,6 +4,8 @@ title: "构建指北 #4 aar 和 tools:replace 冲突"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
+*『构建指北』是探索 Android 构建相关的一系列文章，涵盖了 Gradle、Android Gradle Plugin、Kotlin Script 等工具，以及相关架构上的应用。以发现问题解决问题为出发点，传递新知提高生产效率为落脚点。*
+
 最近做一些 SDK 升级时，有些包引入后会有诸如此类的报错：
 
 > AndroidManifest.xml:22:9-40 Error:
@@ -92,3 +94,4 @@ android.buildCacheDir=./build-cache
 更多信息，请参考 Github 仓库内的说明，欢迎大家提 PR 和 ISSUE。
 
 
+*欢迎关注我的[公众号和微博](/about)。*

@@ -140,4 +140,4 @@ public class CustomInstrumentation extends Instrumentation {
 - [Android 插件化原理解析——插件加载机制](http://weishu.me/2016/04/05/understand-plugin-framework-classloader/)
 - [Android插件化（一）：使用改进的MultiDex动态加载assets中的apk](https://github.com/nuptboyzhb/AndroidPluginFramework/blob/master/%E7%AC%AC%E4%B8%80%E8%AF%BE-%E6%94%B9%E8%BF%9B%E7%9A%84MultiDex%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E6%99%AE%E9%80%9Aapk/README.md)
 
-
+*欢迎关注我的[公众号和微博](/about)。*

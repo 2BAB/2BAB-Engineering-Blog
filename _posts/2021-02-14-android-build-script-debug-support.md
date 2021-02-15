@@ -4,6 +4,8 @@ title: "构建指北 #9 Gradle 脚本调试"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
+*『构建指北』是探索 Android 构建相关的一系列文章，涵盖了 Gradle、Android Gradle Plugin、Kotlin Script 等工具，以及相关架构上的应用。以发现问题解决问题为出发点，传递新知提高生产效率为落脚点。*
+
 本文想讨论下目前 IDEA / Android Studio 对 *.gradle(.kts) 脚本调试的支持情况。
 
 ## 可调试能力
@@ -75,7 +77,7 @@ tags: [Android, Gradle, Android Gradle Plugin, 构建]
 
 结果和前一个多模块的 Android 工程并无差别。
 
-## 补充
+## 常见调试问题
 
 再列几个常见的问题供大家参考：
 
@@ -85,7 +87,7 @@ tags: [Android, Gradle, Android Gradle Plugin, 构建]
 
 ### IDEA 对 Android Plugin 的支持
 
-需要注意的是，一般 IDEA 对新功能的支持会更快一些，但目前本文写作时使用的 2020.3 IDEA 版本无法兼容 AGP 4.x，具体可以查看这个 [issue](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360008037240-Gradle-doesn-t-work-anymore-after-IDEA-update-Cannot-convert-string-value-JETPACK-COMPOSE-)）
+需要注意的是，一般 IDEA 对新功能的支持会更快一些，但是对 Android Gradle Plugin 的支持会比 Android Studio 慢一拍。例如当前 4.1.1 版本的 Android Studio 发布后，IDEA 才宣布我们将在 2020.3.2 支持 4.1 （但实际测试并不支持 4.1.1，[issue](https://youtrack.jetbrains.com/issue/IDEA-252775) 里写的 2021.1.EAP 才支持）
 
 ### 使用 Plugin 包装
 
@@ -104,3 +106,5 @@ tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ## 总结
 
 `*.gradle.kts` 目前的调试支持上比较弱，复杂的逻辑尽量使用 `buildSrc` 内预编译插件或者独立插件，其拥有完整调试的能力。
+
+*欢迎关注我的[公众号和微博](/about)。*

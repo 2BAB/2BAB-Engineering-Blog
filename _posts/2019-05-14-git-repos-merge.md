@@ -42,3 +42,4 @@ $ git merge a-core --allow-unrelated-histories
 国内例如淘系的 App 比较倾向于第二种，而国外的公司比如 Google 更多会采用第一种，各有优劣吧。
 
 
+*欢迎关注我的[公众号和微博](/about)。*

@@ -4,6 +4,8 @@ title: "构建指北 #3 再谈 AAR 与混淆"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
+*『构建指北』是探索 Android 构建相关的一系列文章，涵盖了 Gradle、Android Gradle Plugin、Kotlin Script 等工具，以及相关架构上的应用。以发现问题解决问题为出发点，传递新知提高生产效率为落脚点。*
+
 之前写了篇[文章](http://2bab.me/2017/03/24/gradle-daily-crash-library-module-buildtypes/)讲到了由于 `buildTypes` 默认设置的原因导致  library module 无法 debug 的情况。事实上，当时只解决了打 Debug 包的情况，而忽略了打 Release 包时还埋了一个隐藏的问题。
 
 问题还原：我们在做全局的 `rebuild` 或者 `assembleRelease` 时，会出现有些类找不到的情况，而 `assembleDebug` 不会。仔细观察会发现，这些报错的类都是被外部 module 引用的部分，例如 module A 有类 Clazz，被 module B 引用，则 Clazz 报错。
@@ -34,3 +36,4 @@ tags: [Android, Gradle, Android Gradle Plugin, 构建]
         }
        ```
 
+*欢迎关注我的[公众号和微博](/about)。*

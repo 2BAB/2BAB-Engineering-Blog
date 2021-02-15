@@ -535,7 +535,7 @@ Android 5.0 添加了如下一些测试和辅助功能的支持：
 
 - [BIND_DREAM_SERVICE](https://developer.android.com/reference/android/Manifest.permission.html#BIND_DREAM_SERVICE)：当 target API level 为 21 或更高时，Daydream 服务需要这项权限，以确保只有系统可以与之绑定。
 
-
+*欢迎关注我的[公众号和微博](/about)。*
 
 
 

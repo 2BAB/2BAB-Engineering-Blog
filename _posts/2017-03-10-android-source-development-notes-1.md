@@ -66,3 +66,4 @@ OK，终于 Run 起来了。后续可以做进一步的调试了。
 2. [Build and Run Android from AOSP Source Code to a Nexus 7](https://stanfy.com/blog/build-and-run-android-from-aosp-source-code-to-a-nexus-7/)
 
 
+*欢迎关注我的[公众号和微博](/about)。*

@@ -4,6 +4,8 @@ title: "构建指北 #2 AGP 2.3.0 再无 exploded-aar"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
+*『构建指北』是探索 Android 构建相关的一系列文章，涵盖了 Gradle、Android Gradle Plugin、Kotlin Script 等工具，以及相关架构上的应用。以发现问题解决问题为出发点，传递新知提高生产效率为落脚点。*
+
 升级 Android Gradle  Plugin 至 2.3.0 后，会发现 exploded-aar 这个 build 目录下的文件夹大部分情况下不存在了（但是仍然有时候会出现一两个 aar 的解压包，有些诡异）。这个改动最相关的原因是 2.3.0 默认开启了 Build Cache，具体在[这里](http://tools.android.com/tech-docs/build-cache)有说明。
 
 <!-- more -->
@@ -35,7 +37,7 @@ public static boolean shouldUseBuildCache(
 
 
 
-
+*欢迎关注我的[公众号和微博](/about)。*
 
 
 

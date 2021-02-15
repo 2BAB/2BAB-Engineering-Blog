@@ -90,4 +90,4 @@ try {
 - [http://blog.csdn.net/NUPTboyZHB/article/category/1204147](http://blog.csdn.net/NUPTboyZHB/article/category/1204147)
 - [https://zhuanlan.zhihu.com/p/20515113](https://zhuanlan.zhihu.com/p/20515113)
 
-
+*欢迎关注我的[公众号和微博](/about)。*

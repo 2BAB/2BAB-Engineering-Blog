@@ -4,6 +4,8 @@ title: "构建指北 #8 AppPlugin 加了代理？"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
+*『构建指北』是探索 Android 构建相关的一系列文章，涵盖了 Gradle、Android Gradle Plugin、Kotlin Script 等工具，以及相关架构上的应用。以发现问题解决问题为出发点，传递新知提高生产效率为落脚点。*
+
 ### 问题回顾
 
 这两天在维护 [ScratchPaper](https://github.com/2BAB/ScratchPaper) ，更新依赖的 AGP（Android Gradle Plugin）版本到 `3.6.1`。升级的过程中发现，原本项目使用到的对 `AppPlugin` 的 Hook 点失效：
@@ -132,5 +134,5 @@ import com.android.build.gradle.internal.plugins.BasePlugin
 
 不确定之后基于 AGP 的 Hook 是否还像之前一样可操作，目前看来版本迭代的类变化更加的频繁，我自己维护的基于 AGP 的 Plugins 可能也会增加维护成本。之前考虑过的开发一个第三方的 AGP 的 Polyfill 也必须得操作起来了，分离关注点，减少插件开发和维护成本，在插件上集中注意力实现一个点的目标。
 
-
+*欢迎关注我的[公众号和微博](/about)。*
 

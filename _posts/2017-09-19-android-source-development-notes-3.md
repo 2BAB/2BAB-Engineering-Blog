@@ -22,5 +22,5 @@ $ make -j9 aapt
 3. 由于是要编译一个自己用的 aapt，所以最好是备份一个 aapt，但是直接在源码目录 copy 一份会有报错，正确的姿势[参考这个](http://blog.csdn.net/sbsujjbcy/article/details/51418336)，当然，我偷懒直接拷了一份到非源码目录下的位置；
 4. 以 Mac 为例，生成产物的路径是 `/pathToYourAndroidSource/out/host/darwin-x86/bin/aapt`（一开始用的 `/pathToYourAndroidSource/out/target` 里的产物发现会出现 `cannot execute binary file`，正常在 Mac 上使用的 aapt 的格式是 Mach-O 的可执行文件，但是这个 aapt 是 elf-32 的，也就是 32位 的 linux 下执行的，暂时没去了解是编译出其他平台的版本还是中间产物）
 
-
+*欢迎关注我的[公众号和微博](/about)。*
 

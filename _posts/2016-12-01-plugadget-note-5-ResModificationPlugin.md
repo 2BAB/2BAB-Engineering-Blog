@@ -300,3 +300,4 @@ public class MainActivity extends Activity {
 - [Small](https://github.com/wequick/Small)
 
 
+*欢迎关注我的[公众号和微博](/about)。*

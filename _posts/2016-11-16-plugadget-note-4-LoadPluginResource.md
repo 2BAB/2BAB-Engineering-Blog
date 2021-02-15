@@ -143,3 +143,4 @@ public class MainActivity extends AppCompatActivity {
 - [Android插件化（三）加载插件apk中的Resource资源](http://blog.csdn.net/nupt123456789/article/details/50414175)
 
 
+*欢迎关注我的[公众号和微博](/about)。*

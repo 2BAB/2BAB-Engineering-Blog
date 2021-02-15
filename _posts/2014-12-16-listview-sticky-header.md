@@ -347,3 +347,4 @@ public class SectionAdapter extends ArrayAdapter<String> {
 
 - listview 从下面快速滑动到顶部后，会有回弹效果，造成分段标头瞬间变高（或出现两个分段标头）。
 
+*欢迎关注我的[公众号和微博](/about)。*

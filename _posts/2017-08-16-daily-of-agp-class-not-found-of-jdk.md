@@ -4,6 +4,8 @@ title: "构建指北 #6 JDK 内的某个包失踪了"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
+*『构建指北』是探索 Android 构建相关的一系列文章，涵盖了 Gradle、Android Gradle Plugin、Kotlin Script 等工具，以及相关架构上的应用。以发现问题解决问题为出发点，传递新知提高生产效率为落脚点。*
+
 最近在改一个之前的 Annotation Processor，想要实现一个这样的需求：对一个 Class 所 implement 的 interface 做判断——这些 interface 是否 extends 自一个统一的父 Interface。于是 Debug + Evaluate Expression 挖一下 `TypeElement` 的实例里都有些啥，看看有没好使的 API。
 
 <!--more-->
@@ -47,3 +49,4 @@ List<? extends TypeMirror> interfaces = typeElement.getInterfaces();
 
 
 
+*欢迎关注我的[公众号和微博](/about)。*
