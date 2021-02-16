@@ -10,7 +10,7 @@ tags: [Android, Gradle, Android Gradle Plugin, 构建]
 
 ## 可调试能力
 
-关于可调试能力的定义，举个栗子，我们在常见的 `build.gradle.kts` 添加多种可能的脚本片段，包括但不限于属性声明、文件读取、操作 Gradle 相关 API、操作 AGP 相关 API 等等，然后里打上多个断点，编译时 remote attach 上去，查看**能否在正确的地方挂起，能否获取到当前上下文的信息，能否执行 Expression Evaluate 等操作**。
+关于可调试能力的定义，举个栗子，我们在常见的 `build.gradle.kts` 添加多种脚本片段，包括但不限于属性声明、文件读取、操作 Gradle 相关 API、操作 AGP 相关 API 等等，然后里打上多个断点，编译时 remote attach 上去，查看**能否在正确的地方挂起，能否获取到当前上下文的信息，能否执行 Expression Evaluate 等操作**。
 
 具体到测试的点：
 
