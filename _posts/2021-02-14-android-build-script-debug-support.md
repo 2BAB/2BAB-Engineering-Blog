@@ -6,7 +6,7 @@ tags: [Android, Gradle, Android Gradle Plugin, 构建]
 
 *『构建指北』是探索 Android 构建相关的一系列文章，涵盖了 Gradle、Android Gradle Plugin、Kotlin Script 等工具，以及相关架构上的应用。以发现问题解决问题为出发点，传递新知提高生产效率为落脚点。*
 
-本文想讨论下目前 IDEA / Android Studio 对 *.gradle(.kts) 脚本调试的支持情况。
+本文想讨论下目前 IDEA / Android Studio 对 *.gradle.kts 脚本调试的支持情况。
 
 ## 可调试能力
 
@@ -105,6 +105,6 @@ tags: [Android, Gradle, Android Gradle Plugin, 构建]
 
 ## 总结
 
-`*.gradle.kts` 目前的调试支持上比较弱，复杂的逻辑尽量使用 `buildSrc` 内预编译插件或者独立插件，其拥有完整调试的能力。
+Gradle 脚本（特指 `*.gradle.kts`，不过 `*.gradle` 应该也差不多） 目前调试的支持上比较弱，复杂的逻辑尽量使用 `buildSrc` 内预编译插件/独立插件，其拥有完整调试的能力。
 
 *欢迎关注我的[公众号和微博](/about)。*
