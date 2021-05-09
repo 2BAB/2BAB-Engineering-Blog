@@ -40,3 +40,5 @@ Android 初学者可以活用借鉴：
 ![](https://2bab-images.lastmayday.com/blog/Screenshot%202021-05-02%20at%204.05.14%20PM.png?imageslim)
 
 是好书，把我们联系在一起。
+
+*欢迎关注我的[公众号和微博](/about)。*
