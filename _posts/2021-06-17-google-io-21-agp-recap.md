@@ -285,6 +285,6 @@ abstract class ExamplePlugin : Plugin<Project> {
 
 ## 总结
 
-Android 团队这两年多放了一些精力在 AGP & AS 上，更加注重 Engineering Experience 的东西。在解决了很多历史遗留问题的同时，这次的 Session 可以看得出来其对 AGP 周边生态的建设更有长远的计划，希望明年可以看到这些东西真的被更多 Android 开发者接受，到时候我也一定再写一篇 22 年版的总结和前瞻。
+从开发者的角度来看，Android 工具团队在 AGP & AS 上更加注重 Engineering Experience 的东西了。在解决了很多历史遗留问题的同时，这次的 Session 还透露出对 AGP 周边生态的建设的长远计划，希望明年可以看到这些东西真的被更多 Android 开发者接受，到时候我也一定再写一篇 22 年版的总结和前瞻。
 
 *欢迎关注我的[ Github / 公众号 / 微博 / Twitter](/about)。*
