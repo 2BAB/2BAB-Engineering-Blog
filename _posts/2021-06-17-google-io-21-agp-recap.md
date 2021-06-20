@@ -10,7 +10,7 @@ tags: [Android, Gradle, Android Gradle Plugin, 构建]
 
 ### Configuration Cache
 
-Gradle 的生命周期分为大的三个部分：初始化阶段（Initialization Phase)，配置阶段（Configuration Phase），执行阶段（Execution Phase）。其中任务执行的部分只要处理恰当，已经能够很好的进行缓存和重用——重用已有的缓存是加快编译速度十分关键的一环，如果可以把这个机制也带到其他阶段当然也可以带来一些收益。仅次于了执行阶段耗时的部分一般是配置阶段，而今年 AGP 给我们带来的 Gradle [Configuration Cache](https://docs.gradle.org/current/userguide/configuration_cache.html#config_cache:requirements) 的支持，一项自 [Gradle 6.6](https://blog.gradle.org/introducing-configuration-caching) 起开始孵化的新功能。它使得配置阶段的主要产出物——Task Graph 可以被重用，在示例的项目中这个优化可以带来 8s 左右的不必要等待（如果 Gradle 脚本配置并没有改变）。
+Gradle 的生命周期分为大的三个部分：初始化阶段（Initialization Phase)，配置阶段（Configuration Phase），执行阶段（Execution Phase）。其中任务执行的部分只要处理恰当，已经能够很好的进行缓存和重用——重用已有的缓存是加快编译速度十分关键的一环，如果把这个机制运用到其他阶段当然也能带来一些收益。仅次于执行阶段耗时的一般是配置阶段，而今年 AGP 给我们带来的 Gradle [Configuration Cache](https://docs.gradle.org/current/userguide/configuration_cache.html#config_cache:requirements) 的支持，一项自 [Gradle 6.6](https://blog.gradle.org/introducing-configuration-caching) 起开始孵化的新功能。它使得配置阶段的主要产出物——Task Graph 可以被重用，在示例的项目中这个优化可以带来 8s 左右的不必要等待（如果 Gradle 脚本配置并没有改变）。
 
 ![](https://2bab-images.lastmayday.com/blog/20210617155730.png?imageslim)
 
