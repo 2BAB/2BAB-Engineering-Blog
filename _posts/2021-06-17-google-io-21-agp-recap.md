@@ -4,7 +4,7 @@ title: "继往开来：Google I/O 21 Android Gradle Plugin 更新总结"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
-距离 Google I/O 2021 已经过去了将近一个月，关于 Android Gradle Plugin（AGP）方面的东西主要集中在 “What’s new in Android Gradle plugin” 这个 session。不过由于 2020 年没有 Google I/O，线下的活动也因为疫情全部暂停了，所以这个 session 短短 11 分钟，信息量却相当大，几乎可当作是这两年更新的重点浓缩（前后看了三遍）。也因此，这篇文章里我会放出很多额外的参考资料，挖了下最近一两年大家可能忽略了的 talks/posts/repos，整体脉络按这个 session 的 agenda 来。
+距离 Google I/O 2021 已经过去了将近一个月，最近几天捋了捋关于 Android Gradle Plugin（AGP）方面的东西，主要集中在 “What’s new in Android Gradle plugin” 这个 session。不过由于 2020 年没有 Google I/O，线下的活动也因为疫情全部暂停，所以这个 session 短短 11 分钟，信息量却相当大，几乎可当作是这两年更新的重点浓缩（前后看了三遍）。也因此，这篇文章里我会放出很多额外的参考资料，挖了下最近一两年大家可能忽略了的 talks/posts/repos。文章整体脉络仍按这个 session 的 agenda 来。
 
 ## 性能提升
 
@@ -31,8 +31,11 @@ org.gradle.unsafe.configuration-cache=true
 之后 Cache 就可以被下一次构建复用（如果没有构建脚本修改）：
 
 > Reusing configuration cache.
+> 
 > ...
+> 
 > 51 actionable tasks: 2 executed, 49 up-to-date
+> 
 > Configuration cache entry reused.
 
 
@@ -48,7 +51,7 @@ org.gradle.unsafe.configuration-cache=true
 - [Gradle Properties Change - Android Gradle Plugin 4.2 Release Note](https://developer.android.com/studio/releases/gradle-plugin#4.2-gradle-properties)
 - [Gradle Configuration Cache Support - Kotlin Doc](https://kotlinlang.org/docs/gradle.html#gradle-configuration-cache-support)
 
-而作为插件开发者，则还要关心 Configuration Cache 的适配工作。其重点在于：Task 的参数和内部实现需要避开直接传入/使用 Gradle 的几个 Context 及一些无法序列化的类。以我维护的 Seal 插件为例，它是一个解决 `AndroidManifest.xml` 冲突的小插件，我们执行 `/gradlew --configuration-cache :test-app:assembleDebug` 会发现有两个问题待修复：
+而作为插件开发者，则还要关心 Configuration Cache 的适配工作。其重点在于：Task 的参数和内部实现需要避开直接传入/使用 Gradle 的几个 Context 及一些无法序列化的类。以我维护的 [Seal](https://github.com/2BAB/Seal) 插件为例，它是一个解决 `AndroidManifest.xml` 冲突的小插件，我们执行 `/gradlew --configuration-cache :test-app:assembleDebug` 会发现有两个问题待修复：
 
 ![](https://2bab-images.lastmayday.com/blog/io-2021-agp-config-cache-seal-plugin.png?imageslim)
 
@@ -89,7 +92,7 @@ Lint 的运行一直是耗时大户，在 AGP 7.0 后（最早计划于是 3.5�
 
 另外 AS + AGP 自 4.x 以来还有一些提升的点：
 
-- Gradle Kotlin DSL 体验和性能提升，可以看到 Google I/O Android App [iosched](https://github.com/google/iosched) 项目已经全部改成 `*.gradle.kts` 脚本；
+- Gradle Kotlin DSL 体验和性能提升，可以看到 [Google I/O Android App](https://github.com/google/iosched) 项目已经全部改成 `*.gradle.kts` 脚本；
 - AAPT2 的性能提升；
 - JDK 11 引入的性能提升；
 - ...
@@ -102,7 +105,7 @@ Lint 的运行一直是耗时大户，在 AGP 7.0 后（最早计划于是 3.5�
 
 ### DSL Doc 迁移至 android.com
 
-旧的 AGP DSL [文档](https://google.github.io/android-gradle-dsl/) 从 3.4 之后就不再更新了。新的 DSL 文档迁移至 [android.com](https://developer.android.com/reference/tools/gradle-api)，更加统一。按版本可查看：
+旧的 AGP DSL [文档](https://google.github.io/android-gradle-dsl/) 从 3.4 之后就不再更新了。新的文档迁移至 [android.com](https://developer.android.com/reference/tools/gradle-api)，更加统一。依旧可按版本查看：
 
 - 当前版本（Current Release）：即稳定版本 4.2；
 - 预览版本（Preview Releases）：即 beta 7.0 和 alpha 7.1 测试版；
@@ -110,11 +113,11 @@ Lint 的运行一直是耗时大户，在 AGP 7.0 后（最早计划于是 3.5�
 
 ![](https://2bab-images.lastmayday.com/blog/io-2021-dsl-doc.png?imageslim)
 
-这个变化也反映在了 [google source](https://android.googlesource.com/platform/manifest/+refs) 的 tag 上，对于 AGP 源码来说 `gradle-x.y.z` 的 tag 自 3.4.0 之后就没有了，目前你可以使用 `studio-x.y.z` 例如 `studio-4.2.0`来快速定位 AGP 的版本。
+这个变化也反映在了 [google source](https://android.googlesource.com/platform/manifest/+refs) 的 tag 上，对于 AGP 源码来说 `gradle-x.y.z` 的 tag 自 3.4.0 之后就没有了，目前你可以使用 `studio-x.y.z` 例如 `studio-4.2.0` 来反向定位 AGP 的版本。
 
 ### Android Studio 提供的 AGP 升级助手
 
-为了让开发者更便捷流畅地升级 AGP，AGP 配合 AS 的推出了升级助手功能。这个新特性已经迭代了几个版本，目前对 Gradle Groovy DSL 脚本的升级十分有用，当你看到升级提示时（一般发生在刚打开一个工程时）：
+为了让开发者便捷流畅地升级 AGP，AGP 配合 AS 的推出了升级助手功能。这个新特性已经迭代了几个版本，目前对 Gradle Groovy DSL 脚本的升级十分有用，当你看到升级提示时（一般发生在刚打开一个工程时）：
 
 ![](https://2bab-images.lastmayday.com/blog/io-2021-agp-upgrade-assistant.png?imageslim)
 
@@ -126,7 +129,7 @@ Lint 的运行一直是耗时大户，在 AGP 7.0 后（最早计划于是 3.5�
 
 ![](https://2bab-images.lastmayday.com/blog/io-2021-agp-upgrade-assistant-3.png?imageslim)
 
-当然，复杂的对象引用也无法帮你直接修改，这已经远超该工具应该做的范围了，例如 `classpath(Deps.agp)`。你可以把其当成类似 `Java` 转 `Kotlin` 的辅助工具，先用它运行一遍，然后再手动对照 DSL 文档修改。
+当然，复杂的对象引用也无法帮你直接修改，例如 `classpath(Deps.agp)`，这已经超过该工具能做的范围。你可以把其当成类似 `Java` 转 `Kotlin` 的辅助工具，先用它快速升级和整理基础的 DSL，然后再手动对照 DSL 文档修改出错的小部分。
 
 ## 新的 Variant API
 
@@ -139,7 +142,7 @@ Variant API 的更新可以概括：为了使协同插件的开发者依赖于�
 
 ### Variant 遍历入口变更
 
-大部分 AGP 生态的协同插件都需要注册 Variant Aware 的 Task，即遍历 Variant 注册与其对应的自定义 Task，例如上面提到的 Seal 插件的 `postUpdateDebugManifest` `postUpdateReleaseManifest`。你一定看到过这样的代码（Groovy）：
+大部分 AGP 生态的协同插件都需要注册 Variant aware 的 Task，即遍历 Variant 注册与其对应的自定义 Task，例如上面提到的 Seal 插件的 `postUpdateDebugManifest` `postUpdateReleaseManifest`。你一定看到过这样的代码（Groovy）：
 
 ``` Groovy
 def android = project.extensions.android
@@ -161,7 +164,7 @@ androidExtension.applicationVariants.all { variant ->
 
 如果是适用于 library 的插件则需要 `LibraryExtension` 和 `libraryVariants`。
 
-这类的代码现在改成 gradle-api 的内部调用：
+这类 API 现在改成了 `gradle-api` 内的新 API 调用：
 
 ``` Kotlin
 val androidExtension = project.extensions.getByType<ApplicationAndroidComponentsExtension>()
@@ -170,7 +173,7 @@ androidExtension.onVariants { variant ->
 }
 ```
 
-这里获取到的 Variant 是 [com.android.build.api.variant.ApplicationVariant](https://developer.android.com/reference/tools/gradle-api/7.1/com/android/build/api/variant/ApplicationVariant)，Extension 则来自于 [com.android.build.api.extension.ApplicationAndroidComponentsExtension](https://developer.android.com/reference/tools/gradle-api/4.2/com/android/build/api/extension/ApplicationAndroidComponentsExtension)。
+这里获取到的 Variant 是 [com.android.build.api.variant.ApplicationVariant](https://developer.android.com/reference/tools/gradle-api/7.1/com/android/build/api/variant/ApplicationVariant)，Extension 则来自于 [com.android.build.api.extension.ApplicationAndroidComponentsExtension](https://developer.android.com/reference/tools/gradle-api/4.2/com/android/build/api/extension/ApplicationAndroidComponentsExtension)。另外一个可能会用到的接口是 `beforeVariants(...)`，用来控制 Variant 的构建，例如全局修改一些 Variant 的属性等。从这段 Snippet 我们可能看不出来 Variant 具体的变化，但这变化背后包含了规范的 Variant 状态流转，公开的 API 等。
 
 ### 部分自定义 Task 的简化
 
@@ -225,7 +228,7 @@ androidComponents {
 
 ![](https://2bab-images.lastmayday.com/blog/io-2021-asm-api.png?imageslim)
 
-ASM API 是之前 Transform API 的替代品，旨在更低成本地提供一个 Class -> Dex 之间的插入点用以修改字节码。它没有了之前 Transform API 的灵活性，比如目前看起来它和 ASM 字节码工具是绑定的，不支持 Javassist 或者 Aspect 等。但同时，它拥有更好的性能，更低的使用成本（指实现 transform 本身，ASM 实际上是相对 Javasssist Aspect 更底层的 API），以及更容易适配 Gradle 的新特性。目前刚刚开始孵化，从 API Doc 来看还不推荐开发者使用它来构建一个生产环境的插件。
+ASM API 是之前 Transform API 的替代品，旨在更低成本地提供一个 Class -> Dex 之间的插入点用以修改字节码。它没有了之前 Transform API 的灵活性，比如目前看起来它和 ASM 字节码工具是绑定的，不支持 Javassist 或者 Aspect 等。但同时，它拥有更好的性能，更低的使用成本（指实现 transform 本身，因为 ASM 实际上是相对 Javasssist Aspect 更底层的 API，更灵活、学习成本也更高），以及更容易适配 Gradle 的新特性。目前刚刚开始孵化，从 API Doc 来看还不推荐开发者使用它来构建一个生产环境的插件。
 
 ``` Kotlin
 abstract class ExamplePlugin : Plugin<Project> {
@@ -274,7 +277,7 @@ abstract class ExamplePlugin : Plugin<Project> {
 - [Component#transformClassesWith(...)](https://developer.android.com/reference/tools/gradle-api/7.1/com/android/build/api/component/Component.html#transformClassesWith(java.lang.Class,%20com.android.build.api.instrumentation.InstrumentationScope,%20kotlin.Function1))
 - [InstrumentationParameters](https://developer.android.com/reference/tools/gradle-api/7.1/com/android/build/api/instrumentation/InstrumentationParameters)
 
-对经典的 Transform 不熟悉的朋友可以看下几个知名的 Transform 库封装（都是中国公司做的开源）：
+对经典的 Transform 不熟悉的朋友可以看下几个知名的 Transform 库封装（挺巧都是中国公司的开源项目）：
 
 - [ByteX](https://github.com/bytedance/ByteX)（活跃）
 - [Booster](https://github.com/didi/booster)（活跃，部分功能使用）
