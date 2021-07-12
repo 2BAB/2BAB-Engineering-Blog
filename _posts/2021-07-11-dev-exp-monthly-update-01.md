@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AB 的工程效率小集 - 1"
+title: "AB 的工程效率小集 #1 7月刊"
 tags: [Android, Gradle, Android Gradle Plugin, 构建, 工程效率小集]
 ---
 
@@ -31,6 +31,8 @@ It also gives you some nice additional methods to add files and to manage them.
 **[Q2](https://gradle-community.slack.com/archives/CA7UM03V3/p1624759837322700): Gradle 7.1 + zulu arm64 JDK11 do not run natively on my M1 Mac mini.**
 
 A2: 这则问题我后来自己发现了问题（小黄鸭调试法），因为我使用 SDKMAN! 安装的 zulu 的sdk，但是 SDKMAN! 本身是通过 Rosetta2 转译运行的，加上它在命令行 `bash_profile` / `zshrc` 添加了一些东西（没细看了...大概是为了支持 Java 版本的切换等），导致 Gradle 起 java 进程时也都通过 Rosetta2 去跑。删掉重装后即可。
+
+![](https://2bab-images.lastmayday.com/blog/20210712213206.png?imageslim)
 
 **[Q3](https://gradle-community.slack.com/archives/CA83B1VLL/p1622211648007000)：From the performance perspective, is buildSrc still a bit worse than composite build?**
 
@@ -83,6 +85,7 @@ A5:
 4. 用 `buildFinish()` 生命周期监听器，所有任务跑完后取 apk 做处理可以不需要依赖 AGP；
 5. 用新的 Artifacts API （见 A4 的链接）。
 
+![](https://2bab-images.lastmayday.com/blog/lu2nXbi7yEZ1p0eoD3eKMSCjsKYy.jpeg?imageslim)
 
 ## Kotlin 周边：Koin/Ktor/Coil/...
 
