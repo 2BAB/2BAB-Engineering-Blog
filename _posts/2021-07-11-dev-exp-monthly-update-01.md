@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AB 的工程效率小集 #1 7月刊"
+title: "AB 的工程效率小集 #1 七月刊"
 tags: [Android, Gradle, Android Gradle Plugin, 构建, 工程效率小集]
 ---
 
