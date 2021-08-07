@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "构建指北 #10 Android 开发工具组合 - 以 M1 为例"
+title: "构建指北 #10 Android 开发工具兼容性"
 tags: [Android, Gradle, Android Gradle Plugin, 构建]
 ---
 
