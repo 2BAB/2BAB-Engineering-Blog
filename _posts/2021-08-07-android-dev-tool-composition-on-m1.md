@@ -44,7 +44,7 @@ tags: [Android, Gradle, Android Gradle Plugin, 构建]
 Kotlin 的版本搭配限制相对不多，一般我考虑三个点：
 
 - 有没有特别吸引人的新功能，比如刚放出稳定版的 Coroutine、Flow，或者新版本 Kotlin Multiplatform Mobile 的更好支持等；
-- 不用大迭代的第一个版本，例如 `1.4.0`，`1.5.0`，这条其实广泛适用于各类 Library；
+- 用不用大迭代的第一个版本，例如观察刚发布时的 `1.4.0`，`1.5.0`，这条其实广泛适用于各类 Library；
 - Gradle 目前 bundle/test 的 Kotlin 的版本，例如最新的 7.1.1 stable 依旧是用的 `1.4.31` 的 Kotlin（7.2 RC 则跳到 `1.5.21` 了）；
 
 关于最后一点，如果使用的 Kotlin 版本和 Gradle bundle 的不一致，会出现如下 Warning：

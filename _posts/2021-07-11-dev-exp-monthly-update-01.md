@@ -66,7 +66,7 @@ A4:
 - `archivesBaseName` 的配置看了下是从 Gradle API 来的，并不是 AGP 的（AGP 有挺多地方用了不过，但是没法搞 variant aware 的策略），如果你真想 hack 一下，那就根据你输入的命令 hardcode 对应的 property：`if(gradle.startParameter.getTaskNames().get(0).contains("India")) { setProperty(...) }`
 - 现在应该用这个了 Artifacts API：https://github.com/android/gradle-recipes/blob/agp-4.2/Kotlin/getApksTest/app/build.gradle.kts （可以切分支查看不同版本 AGP 的 API，7.0 后稳定了），添加一个 Task 获取对应渠道 APK 后再修改名称。
 
-**Q5: 对于想在 assembleDebug 后对 APK 执行一些操作的情况，可以用 `finalizeBy()`。
+**Q5: 对于想在 assembleDebug 后对 APK 执行一些操作的情况，可以用 `finalizeBy()`。**
 
 A5: 
 
