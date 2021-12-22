@@ -1,3 +1,8 @@
+---
+layout: post
+title: "构建指北 #12 根据 Variant 决定是否启用插件"
+tags: [Android, Gradle, Android Gradle Plugin, 构建]
+---
 
 在 Android 开发中使用过第三方 Gradle 插件的同学都应该碰到过这个问题：**我只想在某一些 buildType 或者 flavor 中应用这个插件，但是找不到合适的办法。**
 
