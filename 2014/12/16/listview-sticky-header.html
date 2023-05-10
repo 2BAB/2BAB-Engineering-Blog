@@ -1,0 +1,252 @@
+<!DOCTYPE html><html lang="en" ><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Jekyll v4.3.2" /><meta property="og:title" content="ListView 两种固定标头的技巧" /><meta name="author" content="2BAB" /><meta property="og:locale" content="en_US" /><meta name="description" content="第一种情况：" /><meta property="og:description" content="第一种情况：" /><link rel="canonical" href="https://2bab.me//2014/12/16/listview-sticky-header" /><meta property="og:url" content="https://2bab.me//2014/12/16/listview-sticky-header" /><meta property="og:site_name" content="2BAB’s Engineering Blog" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2014-12-16T00:00:00+00:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="ListView 两种固定标头的技巧" /><meta name="twitter:site" content="@" /><meta name="twitter:creator" content="@2BAB" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"2BAB","url":"https://2bab.me/"},"dateModified":"2014-12-16T00:00:00+00:00","datePublished":"2014-12-16T00:00:00+00:00","description":"第一种情况：","headline":"ListView 两种固定标头的技巧","mainEntityOfPage":{"@type":"WebPage","@id":"https://2bab.me//2014/12/16/listview-sticky-header"},"url":"https://2bab.me//2014/12/16/listview-sticky-header"}</script><title> ListView 两种固定标头的技巧 - 2BAB&#39;s Engineering Blog</title><link rel="shortcut icon" href="/favicon.ico"><link rel="alternate" type="application/atom+xml" title="2BAB's Engineering Blog" href="/atom.xml"><link rel="alternate" type="application/json" title="2BAB's Engineering Blog" href="https://2bab.me//feed.json" /><link rel="sitemap" type="application/xml" title="sitemap" href="/sitemap.xml" /><style> *,:after,:before{box-sizing:border-box;background-color:inherit;color:inherit;margin:0;padding:0}body{font-family:system-ui, sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;line-height:1.6;font-size:1.1rem;color:#16171a}nav ul{border-right:1px solid #edf2f7}a{color:#000;text-decoration-skip-ink:auto;text-decoration:underline}pre{margin:.5rem 0;padding:.5rem}.post p{margin:.5rem 0}.post h1,.post h2,.post h3,.post h4{margin:1rem 0}.post h2:first-child,.project h2:first-child,.photo h2:first-child{margin-top:0}.meta{margin:2rem 0}p code{background:#f0f0f0;padding-left:0.2rem;padding-right:0.2rem}code{padding:.1rem}pre code{border:none}pre{border:1px solid #eee;padding:1rem;overflow-x:auto}blockquote{overflow-x:auto}table{display:inline-block;overflow:auto;border-collapse:collapse}table tr th,table tr td{border:1px solid #eee;padding:0.5rem}img{max-width:100%}hr{background:#000;height:1px;border:0}header{flex-basis:10rem;flex-grow:1;position:relative}header a{text-decoration:none}header li{margin-bottom:.2rem;text-align:right;margin-right:2rem}header a.active{font-weight:bold}header,section{padding:1rem}blockquote{font-style:italic;border-left:5px solid #ececec;padding-left:1rem}h1,h2,h3,h4,h5{line-height:1;margin:1rem 0;font-weight:600}section h1:first-child{margin-top:0}strong,b{font-weight:bold}.photos ul{list-style:none}.photos li{margin-bottom:1.5rem}.photo picture,.project picture{margin-bottom:0.5rem}.posts ul,header ul{list-style:none}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.5rem}.posts li a,.posts li div,.projects li a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time,.projects li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}main{display:flex;flex-wrap:wrap;max-width:60rem;margin:1rem auto;padding:1rem}@media screen and (max-width: 45rem){header li{display:inline;margin-right:1rem}.logo{padding-bottom:1rem}header ul{border-bottom:1px solid #edf2f7;padding-bottom:2rem}nav ul{border-right:0px}.photos ul{margin-top:0.5rem}body{font-size:1rem}header{padding:0rem}section{padding:1rem 0 0 0}.post ul{margin-left:1rem}}section{flex-basis:0;flex-grow:999;min-width:70%;display:flex;flex-direction:column}figcaption{font-size:smaller}.highlight .hll{background-color:#ffffcc}.highlight .c{color:#999988;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{color:#000000;font-weight:bold}.highlight .o{color:#000000;font-weight:bold}.highlight .cm{color:#999988;font-style:italic}.highlight .cp{color:#999999;font-weight:bold;font-style:italic}.highlight .c1{color:#999988;font-style:italic}.highlight .cs{color:#999999;font-weight:bold;font-style:italic}.highlight .gd{color:#000000;background-color:#ffdddd}.highlight .ge{color:#000000;font-style:italic}.highlight .gr{color:#aa0000}.highlight .gh{color:#999999}.highlight .gi{color:#000000;background-color:#ddffdd}.highlight .go{color:#888888}.highlight .gp{color:#555555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaaaaa}.highlight .gt{color:#aa0000}.highlight .kc{color:#000000;font-weight:bold}.highlight .kd{color:#000000;font-weight:bold}.highlight .kn{color:#000000;font-weight:bold}.highlight .kp{color:#000000;font-weight:bold}.highlight .kr{color:#000000;font-weight:bold}.highlight .kt{color:#445588;font-weight:bold}.highlight .m{color:#009999}.highlight .s{color:#d01040}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#445588;font-weight:bold}.highlight .no{color:#008080}.highlight .nd{color:#3c5d5d;font-weight:bold}.highlight .ni{color:#800080}.highlight .ne{color:#990000;font-weight:bold}.highlight .nf{color:#990000;font-weight:bold}.highlight .nl{color:#990000;font-weight:bold}.highlight .nn{color:#555555}.highlight .nt{color:#000080}.highlight .nv{color:#008080}.highlight .ow{color:#000000;font-weight:bold}.highlight .w{color:#bbbbbb}.highlight .mf{color:#009999}.highlight .mh{color:#009999}.highlight .mi{color:#009999}.highlight .mo{color:#009999}.highlight .sb{color:#d01040}.highlight .sc{color:#d01040}.highlight .sd{color:#d01040}.highlight .s2{color:#d01040}.highlight .se{color:#d01040}.highlight .sh{color:#d01040}.highlight .si{color:#d01040}.highlight .sx{color:#d01040}.highlight .sr{color:#009926}.highlight .s1{color:#d01040}.highlight .ss{color:#990073}.highlight .bp{color:#999999}.highlight .vc{color:#008080}.highlight .vg{color:#008080}.highlight .vi{color:#008080}.highlight .il{color:#009999}</style></head><body><main role="main"><header role="banner"> <!--<h1 class="logo">2BAB's Engineering Blog</h1>--><nav role="navigation"><ul><li><a href="/" >文章</a></li><li><a href="https://binary.2bab.me/" >播客</a></li><li><a href="/about" >关于</a></li><li><a href="/search" >搜索</a></li><li><a href="/atom.xml" >Rss</a></li></ul></nav></header><section class="post"><h2>ListView 两种固定标头的技巧</h2><h2 id="第一种情况">第一种情况：</h2><p>界面上有三个view，上面是一个要隐藏的View A，中间是一个不隐藏的View B，下面有一个ListView C。当C向上滑动的时候，如果A还没有被隐藏，就随着滑动而隐藏，当A完全隐藏之后，B就一直在最上面，C还可以继续向上滑动；当C向下滑动的到底后A逐渐显示出来。</p><h3 id="突发奇想的省力方法">突发奇想的省力方法：</h3><blockquote><p>给 ListView C 添加一个HeadView（包含A、B），然后另外准备一个外部的B在屏幕顶部，一开始不可见。ListView当前滚动高度超过A的高度时，显示外部的B；滚动高度小于A时隐藏内部的B。</p></blockquote><!--more--><h3 id="效果">效果：</h3><p><img src="http://2bab-images.lastmayday.com/blog/2014-12-16-listview-sticky-header-1.gif?imageslim" alt="效果图" /></p><h3 id="代码">代码：</h3><p><strong>[MainActivity.java]</strong></p><div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">net.bingyan.hacklistview</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.LayoutInflater</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.AbsListView</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.ArrayAdapter</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.LinearLayout</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.ListView</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="nc">Activity</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="nc">ListView</span> <span class="n">listView</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">LinearLayout</span> <span class="n">sectionB</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">aHeight</span><span class="o">;</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="nc">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+        <span class="n">setContentView</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+
+        <span class="n">sectionB</span> <span class="o">=</span> <span class="o">(</span><span class="nc">LinearLayout</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">main_section_b_outside</span><span class="o">);</span>
+        <span class="n">aHeight</span> <span class="o">=</span> <span class="n">getResources</span><span class="o">().</span><span class="na">getDimensionPixelSize</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">dimen</span><span class="o">.</span><span class="na">main_a_height</span><span class="o">);</span>
+
+        <span class="n">initListView</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">initListView</span><span class="o">(){</span>
+        <span class="n">listView</span> <span class="o">=</span> <span class="o">(</span><span class="nc">ListView</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">main_list_view</span><span class="o">);</span>
+        <span class="nc">ArrayAdapter</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">adapter</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayAdapter</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;(</span><span class="k">this</span><span class="o">,</span> <span class="n">android</span><span class="o">.</span><span class="na">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">simple_expandable_list_item_1</span><span class="o">);</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+            <span class="n">adapter</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"item "</span><span class="o">+</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+        <span class="o">}</span>
+        <span class="n">listView</span><span class="o">.</span><span class="na">setAdapter</span><span class="o">(</span><span class="n">adapter</span><span class="o">);</span>
+        <span class="nc">View</span> <span class="n">headerView</span> <span class="o">=</span> <span class="nc">LayoutInflater</span><span class="o">.</span><span class="na">from</span><span class="o">(</span><span class="k">this</span><span class="o">).</span><span class="na">inflate</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">main_header</span><span class="o">,</span><span class="kc">null</span><span class="o">);</span>
+        <span class="n">listView</span><span class="o">.</span><span class="na">addHeaderView</span><span class="o">(</span><span class="n">headerView</span><span class="o">);</span>
+
+        <span class="n">listView</span><span class="o">.</span><span class="na">setOnScrollListener</span><span class="o">(</span><span class="k">new</span> <span class="nc">AbsListView</span><span class="o">.</span><span class="na">OnScrollListener</span><span class="o">()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onScrollStateChanged</span><span class="o">(</span><span class="nc">AbsListView</span> <span class="n">view</span><span class="o">,</span> <span class="kt">int</span> <span class="n">scrollState</span><span class="o">)</span> <span class="o">{</span>
+
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onScroll</span><span class="o">(</span><span class="nc">AbsListView</span> <span class="n">view</span><span class="o">,</span> <span class="kt">int</span> <span class="n">firstVisibleItem</span><span class="o">,</span> <span class="kt">int</span> <span class="n">visibleItemCount</span><span class="o">,</span> <span class="kt">int</span> <span class="n">totalItemCount</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">getScrollY</span><span class="o">()</span> <span class="o">&gt;=</span> <span class="n">aHeight</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="k">if</span> <span class="o">(</span><span class="n">sectionB</span><span class="o">.</span><span class="na">getVisibility</span><span class="o">()</span> <span class="o">==</span> <span class="nc">View</span><span class="o">.</span><span class="na">INVISIBLE</span><span class="o">)</span> <span class="o">{</span>
+                        <span class="n">sectionB</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="nc">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
+                    <span class="o">}</span>
+                <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">getScrollY</span><span class="o">()</span> <span class="o">&lt;</span> <span class="n">aHeight</span><span class="o">){</span>
+                    <span class="k">if</span> <span class="o">(</span><span class="n">sectionB</span><span class="o">.</span><span class="na">getVisibility</span><span class="o">()</span> <span class="o">==</span> <span class="nc">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">){</span>
+                        <span class="n">sectionB</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="nc">View</span><span class="o">.</span><span class="na">INVISIBLE</span><span class="o">);</span>
+                    <span class="o">}</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">});</span>
+    <span class="o">}</span>
+
+    <span class="c1">//获取滚动距离</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getScrollY</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">View</span> <span class="n">c</span> <span class="o">=</span> <span class="n">listView</span><span class="o">.</span><span class="na">getChildAt</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">c</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="kt">int</span> <span class="n">firstVisiblePosition</span> <span class="o">=</span> <span class="n">listView</span><span class="o">.</span><span class="na">getFirstVisiblePosition</span><span class="o">();</span>
+        <span class="kt">int</span> <span class="n">top</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">getTop</span><span class="o">();</span>
+
+        <span class="kt">int</span> <span class="n">headerHeight</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">firstVisiblePosition</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">headerHeight</span> <span class="o">=</span> <span class="n">listView</span><span class="o">.</span><span class="na">getHeight</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="o">-</span><span class="n">top</span> <span class="o">+</span> <span class="n">firstVisiblePosition</span> <span class="o">*</span> <span class="n">c</span><span class="o">.</span><span class="na">getHeight</span><span class="o">()</span> <span class="o">+</span> <span class="n">headerHeight</span><span class="o">;</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div><p><strong>[activity_main.xml]</strong></p><div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;FrameLayout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+    <span class="na">xmlns:tools=</span><span class="s">"http://schemas.android.com/tools"</span>
+    <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+    <span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+    <span class="na">tools:context=</span><span class="s">".MainActivity"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;ListView</span>
+        <span class="na">android:id=</span><span class="s">"@+id/main_list_view"</span>
+        <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+        <span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+        <span class="na">android:background=</span><span class="s">"@color/material_deep_teal_200"</span> <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;LinearLayout</span>
+        <span class="na">android:id=</span><span class="s">"@+id/main_section_b_outside"</span>
+        <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+        <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+        <span class="na">android:visibility=</span><span class="s">"invisible"</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;include</span>
+            <span class="na">layout=</span><span class="s">"@layout/main_section_b"</span>
+            <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+            <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span> <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;/LinearLayout&gt;</span>
+
+<span class="nt">&lt;/FrameLayout&gt;</span>
+</code></pre></div></div><p><strong>[main_header.xml]</strong></p><div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+    <span class="na">android:orientation=</span><span class="s">"vertical"</span>
+    <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+    <span class="na">android:layout_height=</span><span class="s">"match_parent"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;RelativeLayout</span>
+        <span class="na">android:id=</span><span class="s">"@+id/main_section_a"</span>
+        <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+        <span class="na">android:layout_height=</span><span class="s">"@dimen/main_a_height"</span>
+        <span class="na">android:background=</span><span class="s">"@color/material_blue_grey_800"</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+            <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+            <span class="na">android:layout_centerInParent=</span><span class="s">"true"</span>
+            <span class="na">android:textSize=</span><span class="s">"@dimen/main_text_size"</span>
+            <span class="na">android:text=</span><span class="s">"@string/main_section_a"</span><span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;/RelativeLayout&gt;</span>
+
+    <span class="nt">&lt;include</span>
+        <span class="na">android:id=</span><span class="s">"@+id/main_section_b_inside"</span>
+        <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+        <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+        <span class="na">layout=</span><span class="s">"@layout/main_section_b"</span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/LinearLayout&gt;</span>
+</code></pre></div></div><p><strong>main_section_b.xml</strong></p><div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+    <span class="na">android:orientation=</span><span class="s">"vertical"</span>
+    <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+    <span class="na">android:layout_height=</span><span class="s">"match_parent"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;TextView</span>
+        <span class="na">android:id=</span><span class="s">"@+id/main_section_b"</span>
+        <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+        <span class="na">android:layout_height=</span><span class="s">"@dimen/main_b_height"</span>
+        <span class="na">android:background=</span><span class="s">"@android:color/holo_orange_light"</span>
+        <span class="na">android:gravity=</span><span class="s">"center"</span>
+        <span class="na">android:textSize=</span><span class="s">"@dimen/main_text_size"</span>
+        <span class="na">android:text=</span><span class="s">"@string/main_section_b"</span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/LinearLayout&gt;</span>
+</code></pre></div></div><p><strong>备注：</strong></p><ul><li><p>如果 View B 是一个复杂的 View，上面的方案可能需要改进。因为对 内外两个 View B 的一些代码操作可能要写两遍。我现在想的是把 headerView 的 B 去掉，保留同样大小的白色区域，然后外部的 B 根据 ListView 的滚动同步网上滚。</p></li><li><p>有个小 bug 是滚动条在外部的 B 刚显示时会被遮住一部分 = = 不过现在很多设计都不用滚动条了，实在没办法就自己写一个吧。</p></li></ul><hr /><h2 id="第二种情况">第二种情况：</h2><p>类似于联系人列表的场景，即按首字母对ListView进行分段，并且当前分段标头会停留在ListView最上方。</p><h3 id="从50-android-hacks中学到的方法">从《50 Android Hacks》中学到的方法：</h3><blockquote><p>一方面，每个 List Item 都添加一个隐藏的<strong>分段标头</strong>，当第 n 个 Item 与第 n-1 个 Item 的首字母不相同时（或者其他分割条件下的不同），显示这个分段标头。另一方面，在ListView的上层放一个隐藏的标头，标识当前显示的组别。</p></blockquote><h3 id="效果-1">效果：</h3><p><img src="http://2bab-images.lastmayday.com/blog/2014-12-16-listview-sticky-header-2.gif?imageslim" alt="" /></p><p><a href="https://github.com/Macarse/50AH-code/tree/master/hack026">源码地址</a></p><h3 id="代码-1">代码：</h3><p><strong>[header.xml]</strong></p><div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;TextView</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+    <span class="na">android:id=</span><span class="s">"@+id/header"</span>
+    <span class="na">style=</span><span class="s">"@android:style/TextAppearance.Small"</span>
+    <span class="na">android:layout_width=</span><span class="s">"fill_parent"</span>
+    <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+    <span class="na">android:background=</span><span class="s">"@color/material_deep_teal_200"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div><p><strong>[activity_main.xml]</strong></p><div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;FrameLayout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+    <span class="na">android:layout_width=</span><span class="s">"fill_parent"</span>
+    <span class="na">android:layout_height=</span><span class="s">"fill_parent"</span> <span class="nt">&gt;</span>
+
+    <span class="nt">&lt;ListView</span>
+        <span class="na">android:id=</span><span class="s">"@android:id/list"</span>
+        <span class="na">android:layout_width=</span><span class="s">"fill_parent"</span>
+        <span class="na">android:layout_height=</span><span class="s">"fill_parent"</span> <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;include</span> <span class="na">layout=</span><span class="s">"@layout/header"</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/FrameLayout&gt;</span>
+</code></pre></div></div><p><strong>[list_item.xml]</strong></p><div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+    <span class="na">android:layout_width=</span><span class="s">"fill_parent"</span>
+    <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+    <span class="na">android:orientation=</span><span class="s">"vertical"</span> <span class="nt">&gt;</span>
+
+    <span class="nt">&lt;include</span> <span class="na">layout=</span><span class="s">"@layout/header"</span> <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;TextView</span>
+        <span class="na">android:id=</span><span class="s">"@+id/label"</span>
+        <span class="na">style=</span><span class="s">"@android:style/TextAppearance.Large"</span>
+        <span class="na">android:layout_width=</span><span class="s">"fill_parent"</span>
+        <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/LinearLayout&gt;</span>
+</code></pre></div></div><p><strong>[MainActivity.java]</strong></p><div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">android.app.ListActivity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.AbsListView</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.TextView</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="nc">ListActivity</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="nc">TextView</span> <span class="n">topHeader</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">topVisiblePosition</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="nc">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+        <span class="n">setContentView</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+        <span class="n">topHeader</span> <span class="o">=</span> <span class="o">(</span><span class="nc">TextView</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">header</span><span class="o">);</span>
+        <span class="n">setListAdapter</span><span class="o">(</span><span class="k">new</span> <span class="nc">SectionAdapter</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="nc">Countries</span><span class="o">.</span><span class="na">COUNTRIES</span><span class="o">));</span><span class="c1">// Countries.COUNTRIES 是一个静态String数组</span>
+        <span class="n">getListView</span><span class="o">().</span><span class="na">setOnScrollListener</span><span class="o">(</span>
+                <span class="k">new</span> <span class="nc">AbsListView</span><span class="o">.</span><span class="na">OnScrollListener</span><span class="o">()</span> <span class="o">{</span>
+                    <span class="nd">@Override</span>
+                    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onScrollStateChanged</span><span class="o">(</span><span class="nc">AbsListView</span> <span class="n">view</span><span class="o">,</span>
+                                                     <span class="kt">int</span> <span class="n">scrollState</span><span class="o">)</span> <span class="o">{</span>
+                        <span class="c1">// Empty.</span>
+                    <span class="o">}</span>
+
+                    <span class="nd">@Override</span>
+                    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onScroll</span><span class="o">(</span><span class="nc">AbsListView</span> <span class="n">view</span><span class="o">,</span> <span class="kt">int</span> <span class="n">firstVisibleItem</span><span class="o">,</span>
+                                         <span class="kt">int</span> <span class="n">visibleItemCount</span><span class="o">,</span> <span class="kt">int</span> <span class="n">totalItemCount</span><span class="o">)</span> <span class="o">{</span>
+                        <span class="k">if</span> <span class="o">(</span><span class="n">firstVisibleItem</span> <span class="o">!=</span> <span class="n">topVisiblePosition</span><span class="o">)</span> <span class="o">{</span>
+                            <span class="n">topVisiblePosition</span> <span class="o">=</span> <span class="n">firstVisibleItem</span><span class="o">;</span>
+                            <span class="n">setTopHeader</span><span class="o">(</span><span class="n">firstVisibleItem</span><span class="o">);</span>
+                        <span class="o">}</span>
+                    <span class="o">}</span>
+                <span class="o">});</span>
+        <span class="n">setTopHeader</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">setTopHeader</span><span class="o">(</span><span class="kt">int</span> <span class="n">pos</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">final</span> <span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="nc">Countries</span><span class="o">.</span><span class="na">COUNTRIES</span><span class="o">[</span><span class="n">pos</span><span class="o">].</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+        <span class="n">topHeader</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div><p><strong>[SectionAdapter.java]</strong></p><div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.ViewGroup</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.ArrayAdapter</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.TextView</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SectionAdapter</span> <span class="kd">extends</span> <span class="nc">ArrayAdapter</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="nc">Activity</span> <span class="n">activity</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">SectionAdapter</span><span class="o">(</span><span class="nc">Activity</span> <span class="n">activity</span><span class="o">,</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">objects</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">(</span><span class="n">activity</span><span class="o">,</span> <span class="no">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">list_item</span><span class="o">,</span> <span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">label</span><span class="o">,</span> <span class="n">objects</span><span class="o">);</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">activity</span> <span class="o">=</span> <span class="n">activity</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">View</span> <span class="nf">getView</span><span class="o">(</span><span class="kt">int</span> <span class="n">position</span><span class="o">,</span> <span class="nc">View</span> <span class="n">view</span><span class="o">,</span> <span class="nc">ViewGroup</span> <span class="n">parent</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">view</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">view</span> <span class="o">=</span> <span class="n">activity</span><span class="o">.</span><span class="na">getLayoutInflater</span><span class="o">().</span><span class="na">inflate</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">list_item</span><span class="o">,</span>
+                    <span class="n">parent</span><span class="o">,</span> <span class="kc">false</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="nc">TextView</span> <span class="n">header</span> <span class="o">=</span> <span class="o">(</span><span class="nc">TextView</span><span class="o">)</span> <span class="n">view</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">header</span><span class="o">);</span>
+        <span class="nc">String</span> <span class="n">label</span> <span class="o">=</span> <span class="n">getItem</span><span class="o">(</span><span class="n">position</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">position</span> <span class="o">==</span> <span class="mi">0</span>
+                <span class="o">||</span> <span class="n">getItem</span><span class="o">(</span><span class="n">position</span> <span class="o">-</span> <span class="mi">1</span><span class="o">).</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">!=</span> <span class="n">label</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">header</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="nc">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
+            <span class="n">header</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">label</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="n">header</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="nc">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">getView</span><span class="o">(</span><span class="n">position</span><span class="o">,</span> <span class="n">view</span><span class="o">,</span> <span class="n">parent</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div><p>备注：</p><ul><li><p>没有下一个分段标头把上一个顶出去的效果，而只能对置顶的分段标头setText。</p></li><li><p>listview 从下面快速滑动到顶部后，会有回弹效果，造成分段标头瞬间变高（或出现两个分段标头）。</p></li></ul><p><em>欢迎关注我的<a href="/about">公众号和微博</a>。</em></p><span class="meta"><time datetime="2014-12-16T00:00:00+00:00">December 16, 2014</time> &middot; <a href="/tag/Android">Android</a>, <a href="/tag/UI">UI</a></span> <!--<span class="meta"><time datetime="2014-12-16T00:00:00+00:00">December 16, 2014</time> &middot; <a class="post" href="/tag/Android">Android</a>, <a class="post" href="/tag/UI">UI</a></span> --></section></main></body><script async src="https://www.googletagmanager.com/gtag/js?id=UA-91072395-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-91072395-1'); </script></html>

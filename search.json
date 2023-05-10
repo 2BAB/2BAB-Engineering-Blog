@@ -1,0 +1,454 @@
+[
+  
+    {
+
+      "title"    : "Kotlin 成为 Gradle 默认语言！如何快速上手？KOGE 小册来帮忙！",
+      "url"      : "/2023/05/05/kotlin-for-gradle",
+      "category" : "",
+      "tags"     : "Gradle, Kotlin, Android Gradle Plugin",
+      "date"     : "2023-05-05 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "KotlinConf 2023 参会体验",
+      "url"      : "/2023/04/15/kotlin-conf-23-exp",
+      "category" : "",
+      "tags"     : "社区的力量",
+      "date"     : "2023-04-15 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "构建指北 #12 根据 Variant 决定是否启用插件",
+      "url"      : "/2021/12/21/enable-feature-by-variant",
+      "category" : "",
+      "tags"     : "Android, Gradle, Android Gradle Plugin, 构建",
+      "date"     : "2021-12-21 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "构建指北 #11 BundleTool Gradle Plugin",
+      "url"      : "/2021/12/19/bundle-tool-plugin",
+      "category" : "",
+      "tags"     : "Android, Gradle, Android Gradle Plugin, 构建",
+      "date"     : "2021-12-19 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "编译构建知识的调查结果&amp;新企划！&quot;",
+      "url"      : "/2021/09/24/android-build-survey-result",
+      "category" : "",
+      "tags"     : "Android, Gradle, Android Gradle Plugin, 构建，调研",
+      "date"     : "2021-09-24 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Android App 编译构建知识的小调查",
+      "url"      : "/2021/09/14/android-build-survey",
+      "category" : "",
+      "tags"     : "Android, Gradle, Android Gradle Plugin, 构建，调研",
+      "date"     : "2021-09-14 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "构建指北 #10 Android 开发工具兼容性",
+      "url"      : "/2021/08/07/android-dev-tool-composition-on-m1",
+      "category" : "",
+      "tags"     : "Android, Gradle, Android Gradle Plugin, 构建",
+      "date"     : "2021-08-07 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "AB 的工程效率小集 #1 七月刊",
+      "url"      : "/2021/07/11/dev-exp-monthly-update-01",
+      "category" : "",
+      "tags"     : "Android, Gradle, Android Gradle Plugin, 构建, 工程效率小集",
+      "date"     : "2021-07-11 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "继往开来：Google I/O 21 Android Gradle Plugin 更新总结",
+      "url"      : "/2021/06/17/google-io-21-agp-recap",
+      "category" : "",
+      "tags"     : "Android, Gradle, Android Gradle Plugin, 构建",
+      "date"     : "2021-06-17 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "MavenCentral 发布集成的几个坑",
+      "url"      : "/2021/05/09/trap-of-maven-central-publish",
+      "category" : "",
+      "tags"     : "Android, Gradle",
+      "date"     : "2021-05-09 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Android 开发初学：多读多看多写",
+      "url"      : "/2021/05/01/thoughts-on-android-programming-guide",
+      "category" : "",
+      "tags"     : "Android, 阅读分享",
+      "date"     : "2021-05-01 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "构建指北 #9 Gradle 脚本调试",
+      "url"      : "/2021/02/14/android-build-script-debug-support",
+      "category" : "",
+      "tags"     : "Android, Gradle, Android Gradle Plugin, 构建",
+      "date"     : "2021-02-14 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "构建指北 #8 AppPlugin 加了代理？",
+      "url"      : "/2020/03/20/daily-of-agp-appplugin-delegate",
+      "category" : "",
+      "tags"     : "Android, Gradle, Android Gradle Plugin, 构建",
+      "date"     : "2020-03-20 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "DIY 24 寸的 4K 显示器",
+      "url"      : "/2019/05/24/diy-4k-24inch-monitor",
+      "category" : "",
+      "tags"     : "硬件向",
+      "date"     : "2019-05-24 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "合并两个 Git Repo",
+      "url"      : "/2019/05/14/git-repos-merge",
+      "category" : "",
+      "tags"     : "Git",
+      "date"     : "2019-05-14 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "博客迁移 #2019",
+      "url"      : "/2019/05/14/blog-migration-2019",
+      "category" : "",
+      "tags"     : "Hello World",
+      "date"     : "2019-05-14 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "插件化笔记 #8 - 插件的代码编译",
+      "url"      : "/2017/10/16/plugadget-note-8-package-plugin-java-code",
+      "category" : "",
+      "tags"     : "Android, 插件化",
+      "date"     : "2017-10-16 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "插件化笔记 #7 - MultiClassloader",
+      "url"      : "/2017/10/16/plugadget-note-7-multiclassloader",
+      "category" : "",
+      "tags"     : "Android, 插件化",
+      "date"     : "2017-10-16 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "构建指北 #7 debuggable 属性无效",
+      "url"      : "/2017/09/19/daily-of-agp-debuggable-not-work",
+      "category" : "",
+      "tags"     : "Android, Gradle, Android Gradle Plugin, 构建",
+      "date"     : "2017-09-19 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Android 源码笔记 #3 - Aapt 编译",
+      "url"      : "/2017/09/19/android-source-development-notes-3",
+      "category" : "",
+      "tags"     : "Android, Framework, 源码",
+      "date"     : "2017-09-19 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "构建指北 #6 JDK 内的某个包失踪了",
+      "url"      : "/2017/08/16/daily-of-agp-class-not-found-of-jdk",
+      "category" : "",
+      "tags"     : "Android, Gradle, Android Gradle Plugin, 构建",
+      "date"     : "2017-08-16 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "构建指北 #5 含 buildscript 的脚本执行顺序",
+      "url"      : "/2017/06/21/daily-of-agp-buildscript-block-execute-order",
+      "category" : "",
+      "tags"     : "Android, Gradle, Android Gradle Plugin, 构建",
+      "date"     : "2017-06-21 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "构建指北 #4 aar 和 tools:replace 冲突",
+      "url"      : "/2017/05/23/daily-of-agp-aar-replace-conflict",
+      "category" : "",
+      "tags"     : "Android, Gradle, Android Gradle Plugin, 构建",
+      "date"     : "2017-05-23 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "构建指北 #3 再谈 AAR 与混淆",
+      "url"      : "/2017/04/14/daily-of-agp-aar-proguard",
+      "category" : "",
+      "tags"     : "Android, Gradle, Android Gradle Plugin, 构建",
+      "date"     : "2017-04-14 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "构建指北 #2 AGP 2.3.0 再无 exploded-aar",
+      "url"      : "/2017/03/26/daily-of-agp-not-exploded-aar-2-3-0",
+      "category" : "",
+      "tags"     : "Android, Gradle, Android Gradle Plugin, 构建",
+      "date"     : "2017-03-26 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "构建指北 #1 Library Module BuildTypes",
+      "url"      : "/2017/03/24/daily-of-agp-library-module-buildtypes",
+      "category" : "",
+      "tags"     : "Android, Gradle, Android Gradle Plugin, 构建",
+      "date"     : "2017-03-24 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Android 源码笔记 #2 源码及 Framework 结构",
+      "url"      : "/2017/03/10/android-source-development-notes-2",
+      "category" : "",
+      "tags"     : "Android, Framework, 源码",
+      "date"     : "2017-03-10 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Android 源码笔记 #1 编译&amp;烧录",
+      "url"      : "/2017/03/10/android-source-development-notes-1",
+      "category" : "",
+      "tags"     : "Android, Framework, 源码",
+      "date"     : "2017-03-10 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "插件化笔记 #6 启动插件 Service",
+      "url"      : "/2017/03/08/plugadget-note-6-start-plugin-service",
+      "category" : "",
+      "tags"     : "Android, 插件化",
+      "date"     : "2017-03-08 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "插件化笔记 #5 资源分区修改插件",
+      "url"      : "/2016/12/01/plugadget-note-5-resmodificationplugin",
+      "category" : "",
+      "tags"     : "Android, 插件化",
+      "date"     : "2016-12-01 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "插件化笔记 #4 加载插件资源文件",
+      "url"      : "/2016/11/16/plugadget-note-4-loadpluginresource",
+      "category" : "",
+      "tags"     : "Android, 插件化",
+      "date"     : "2016-11-16 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "插件化笔记 #3 启动插件 Activity",
+      "url"      : "/2016/11/16/plugadget-note-3-startpluginactivity",
+      "category" : "",
+      "tags"     : "Android, 插件化",
+      "date"     : "2016-11-16 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "插件化笔记 #2 加载插件代码",
+      "url"      : "/2016/09/18/plugadget-note-2-loadpluginclass",
+      "category" : "",
+      "tags"     : "Android, 插件化",
+      "date"     : "2016-09-18 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "插件化笔记 #1 ClassLoader 初探",
+      "url"      : "/2016/09/18/plugadget-note-1-classloader",
+      "category" : "",
+      "tags"     : "Android, 插件化",
+      "date"     : "2016-09-18 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Android 5.0 以上 Chrome AppBar 颜色定制",
+      "url"      : "/2015/02/10/theme-color-for-chrome-on-lollipop",
+      "category" : "",
+      "tags"     : "Android, Chrome",
+      "date"     : "2015-02-10 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "无法卸载的 App - 设备管理器漏洞",
+      "url"      : "/2015/02/09/app-cannot-be-uninstalled",
+      "category" : "",
+      "tags"     : "Android",
+      "date"     : "2015-02-09 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "ListView 两种固定标头的技巧",
+      "url"      : "/2014/12/16/listview-sticky-header",
+      "category" : "",
+      "tags"     : "Android, UI",
+      "date"     : "2014-12-16 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Lollipop #2 Material Design",
+      "url"      : "/2014/12/15/lollipop-2-material-design-resource",
+      "category" : "",
+      "tags"     : "Android, Lollipop, UI",
+      "date"     : "2014-12-15 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Android 里不能改变的东西 [译]",
+      "url"      : "/2014/12/11/things-that-cannnot-change",
+      "category" : "",
+      "tags"     : "Android",
+      "date"     : "2014-12-11 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Lollipop #1 Android 5.0 APIs Guide",
+      "url"      : "/2014/12/11/lollipop-1-android-5-0-apis-guide",
+      "category" : "",
+      "tags"     : "Android, Lollipop",
+      "date"     : "2014-12-11 00:00:00 +0000",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Hello World",
+      "url"      : "/2014/12/10/hello-world",
+      "category" : "",
+      "tags"     : "Hello World",
+      "date"     : "2014-12-10 00:00:00 +0000",
+      "discription" : ""
+
+    } 
+  
+]
